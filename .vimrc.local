@@ -1,0 +1,15 @@
+vnoremap <Left> h
+vnoremap <Right> l
+vnoremap <Up> k
+vnoremap <Down> j
+
+color jellybeans+
+colorscheme jellybeans+
+set clipboard=unnamed
+set mouse=a
+set ttymouse=xterm
+map <Esc>[B <Down>
+
+set notimeout
+set ttimeout
+set timeoutlen=50
