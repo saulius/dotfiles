@@ -8,6 +8,8 @@ if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 function slocate {
   mdfind "kMDItemDisplayName == '$@'wc";
 }
