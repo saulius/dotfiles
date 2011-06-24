@@ -1,0 +1,17 @@
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+  br = branch
+  lol = log --oneline --graph --decorate
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[user]
+	name = Saulius Grigaliunas
+	email = saulius@ninja.lt
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	editor = /usr/bin/vim

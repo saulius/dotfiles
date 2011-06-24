@@ -20,5 +20,6 @@ alias vim='/Applications/MacVim.App/Contents/MacOS/Vim'
 alias mc='mc -b'
 
 export EDITOR="vim"
+export PAGER="most"
 
 plugins=(git osx ruby brew gem github git-flow node npm svn rails3 rvm cap)
