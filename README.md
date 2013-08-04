@@ -1,5 +1,3 @@
-# TODO
+# Dotfiles
 
-* add janus
-* add custom vim colors
-* install script
+Because everyone has to have this repo

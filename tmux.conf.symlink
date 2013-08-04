@@ -1,0 +1,44 @@
+unbind C-b
+set -g prefix C-a
+
+bind-key J resize-pane -D
+bind-key K resize-pane -U
+bind-key H resize-pane -L
+bind-key L resize-pane -R
+
+set -g default-terminal "screen-256color"
+
+set-option -g default-command "reattach-to-user-namespace -l zsh"
+
+# Mouse stuff
+setw -g mode-mouse on
+setw -g mouse-select-window on
+setw -g mouse-select-pane on
+setw -g mouse-resize-pane on
+
+set -g status-left-length 32
+set -g status-right-length 270
+
+# Use vim keybindings in copy mode
+setw -g mode-keys vi
+
+# Setup 'v' to begin selection as in Vim
+bind-key -t vi-copy v begin-selection
+bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+
+# Update default binding of `Enter` to also use copy-pipe
+unbind -t vi-copy Enter
+bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+
+set -g status-fg white
+set -g status-bg colour252
+set -g window-status-activity-attr bold
+set -g pane-border-fg colour245
+set -g pane-active-border-fg colour39
+set -g message-fg colour16
+set -g message-bg colour221
+set -g message-attr bold
+
+set -g status-left '#[fg=colour235,bg=colour252,bold] ❐ #S #[fg=colour252,bg=colour238,nobold]⮀#[fg=colour245,bg=colour238,bold] #(whoami) #[fg=colour238,bg=colour252,nobold]⮀'
+set -g status-right ''
+set -g window-status-current-format "#[fg=colour0,bg=colour252,bold] [#W]"

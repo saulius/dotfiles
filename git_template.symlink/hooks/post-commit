@@ -1,0 +1,1 @@
+imagesnap -q $HOME/.gitshots/$(date +%Y-%m-%d-%H%M%S)_$(basename `pwd`).jpg &
