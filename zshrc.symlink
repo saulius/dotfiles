@@ -62,30 +62,31 @@ setopt CORRECT CORRECT_ALL
 # Enable extended globbing
 setopt EXTENDED_GLOB
 
+# chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+
 # PATH
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
+export PATH="$HOME/.cask/bin:$PATH"
 
 # Ruby tweaks
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
+export RUBY_HEAP_MIN_SLOTS=2000000
+export RUBY_HEAP_SLOTS_INCREMENT=500000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_HEAP_FREE_MIN=500000
+export RUBY_GC_MALLOC_LIMIT=70000000
+export RUBY_HEAP_FREE_MIN=100000
 
 # Autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
-# rbenv
-eval "$(rbenv init -)"
 
 # aliases
 alias be='bundle exec'
 alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
 alias glr='fact && git pull --rebase'
 alias vagrant='/usr/bin/vagrant'
+alias emacs='/usr/local/bin/emacs'
 
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' max-errors 1 numeric
@@ -100,3 +101,4 @@ set -o vi
 bindkey -v
 
 eval "$(tmuxifier init -)"
+govuk_dev_dist='precise'
