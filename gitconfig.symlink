@@ -1,3 +1,5 @@
+[core]
+  pager = $(brew --prefix git)/share/git-core/contrib/diff-highlight/diff-highlight | less
 [user]
 	name = Saulius Grigaliunas
 	email = saulius@ninja.lt
