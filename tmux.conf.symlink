@@ -42,3 +42,6 @@ set -g message-attr bold
 set -g status-left '#[fg=colour235,bg=colour252,bold] ❐ #S #[fg=colour252,bg=colour238,nobold]⮀#[fg=colour245,bg=colour238,bold] #(whoami) #[fg=colour238,bg=colour252,nobold]⮀'
 set -g status-right ''
 set -g window-status-current-format "#[fg=colour0,bg=colour252,bold] [#W]"
+
+# Do not delay Esc keypresses (causes issues in Emacs)
+set -g escape-time 1

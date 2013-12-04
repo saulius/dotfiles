@@ -38,7 +38,11 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 setopt prompt_subst
 
 # prompt
-export PROMPT='[${SSH_CONNECTION+"%n@%m:"}%~'
+if [ -n "$INSIDE_EMACS" ]; then
+  export PROMPT='[%n@%m:%0~]# '
+else
+  export PROMPT='[${SSH_CONNECTION+"%n@%m:"}%~'
+fi
 
 export HISTFILE=$HOME/.zhistory       # enable history saving on shell exit
 setopt APPEND_HISTORY          # append rather than overwrite history file.
