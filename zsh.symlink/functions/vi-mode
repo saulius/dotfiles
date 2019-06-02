@@ -1,8 +1,0 @@
-# set VIMODE according to the current mode (default “[i]”)
-VIMODE='[I]'
-function zle-keymap-select {
- VIMODE="${${KEYMAP/vicmd/[N]}/(main|viins)/[I]}"
- zle reset-prompt
-}
-
-zle -N zle-keymap-select
