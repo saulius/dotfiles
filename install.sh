@@ -28,10 +28,15 @@ echo "Turning zsh into acceptable shell"
 if ! sudo cat /etc/shells | grep "$(brew --prefix zsh)"; then
     sudo sh -c "echo '$(brew --prefix zsh)/bin/zsh' >> /etc/shells"
 fi
-if ! echo $SHELL | grep "zsh"; then
+if ! dscl . -read ~/ UserShell | grep "zsh"; then
     chsh -s $(brew --prefix zsh)/bin/zsh
 fi
 
 # tmux
 echo "configuring tmux"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# rust
+if ! test cargo; then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
