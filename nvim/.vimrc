@@ -92,11 +92,11 @@ endif
 " Plugins from vim-scripts repos:
 
 " Search results counter
-Plug 'IndexedSearch'
+Plug 'henrik/vim-indexed-search'
 " XML/HTML tags navigation
-Plug 'matchit.zip'
+Plug 'vim-scripts/matchit.zip'
 " Yank history navigation
-Plug 'YankRing.vim'
+Plug 'vim-scripts/YankRing.vim'
 
 " Language support
 Plug 'tpope/vim-markdown'
