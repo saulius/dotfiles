@@ -58,6 +58,7 @@ cask "little-snitch"
 cask "slack"
 cask "spotify"
 cask "transmission"
+cask "viscosity"
 cask "vlc"
 mas "Tweetbot", id: 1384080005
 mas "The Unarchiver", id: 425424353
