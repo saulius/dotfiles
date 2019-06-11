@@ -10,7 +10,7 @@ setopt auto_cd
 
 # use vim as the visual editor
 export TERM=xterm-256color
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/bin/"
+export PATH="/usr/local/bin:/usr/local/sbin:/sbin:/usr/bin:/bin:$HOME/bin/"
 export VISUAL=vim
 export EDITOR=vim
 export PAGER=more
@@ -27,6 +27,7 @@ alias less=less -rS
 alias more=more -r
 alias vim=nvim
 alias flushdns="sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache"
+alias ag=rg
 
 autoload -U promptinit && promptinit
 prompt redhat
