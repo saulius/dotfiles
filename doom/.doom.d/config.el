@@ -32,25 +32,12 @@
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
 
 (map!
-  :gnvime "A-<down>" #'evil-window-down
-  :gnvime "A-<up>" #'evil-window-up
-  :gnvime "A-<left>" #'evil-window-left
-  :gnvime "A-<right>" #'evil-window-right
-  :gnvime "A-w" #'delete-window
-
-  ;:gnvime "M-<down>" #'evil-window-down
-  ;:gnvime "M-<up>" #'evil-window-up
-  ;:gnvime "M-<left>" #'evil-window-left
-  ;:gnvime "M-<right>" #'evil-window-right
-  ;:gnvime "M-w" #'delete-window
-
-  ;:gnvime "<ESC>-<down>" #'evil-window-down
-  ;:gnvime "<ESC>-<up>" #'evil-window-up
-  ;:gnvime "<ESC>-<left>" #'evil-window-left
-  ;:gnvime "<ESC>-<right>" #'evil-window-right
-  ;:gnvime "<ESC>-w" #'delete-window
-
-  :ne "M-RET"     #'toggle-frame-fullscreen
+  :gnvime [M-right]  #'evil-window-right
+  :gnvime [M-left]   #'evil-window-left
+  :gnvime [M-up]     #'evil-window-up
+  :gnvime [M-down]   #'evil-window-down
+  :gnvime [M-w]      #'evil-delete-window
+  :ne "M-RET"        #'toggle-frame-fullscreen
 
   (:leader
     (:desc "file" :prefix "f"
