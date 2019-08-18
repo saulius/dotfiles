@@ -6,6 +6,8 @@
 (setq confirm-kill-emacs nil
       home-directory (getenv "HOME")
       doom-theme 'doom-one
+      doom-unicode-font nil
+      doom-one-brighter-comments t
       doom-font (font-spec :family "DejaVu Sans Mono" :size 13)
       doom-big-font (font-spec :family "DejaVu Sans Mono" :size 14)
       company-idle-delay 0.2
