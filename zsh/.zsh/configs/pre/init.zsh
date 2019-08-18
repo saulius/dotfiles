@@ -10,7 +10,7 @@ setopt auto_cd
 
 # use vim as the visual editor
 export TERM=xterm-256color
-export PATH="/usr/local/bin:/usr/local/sbin:/sbin:/usr/bin:/bin:$HOME/bin/"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin:/bin:$HOME/bin/"
 export VISUAL=vim
 export EDITOR=vim
 export PAGER=more
