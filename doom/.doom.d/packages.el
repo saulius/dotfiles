@@ -4,6 +4,10 @@
 
 (package! terraform-mode)
 
+(package! format-sql)
+
+(package! osx-clipboard)
+
 (def-package! tern
   :hook (js2-mode . tern-mode))
 

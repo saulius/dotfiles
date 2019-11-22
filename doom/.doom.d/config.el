@@ -24,6 +24,11 @@
 (if (window-system)
   (set-frame-size (selected-frame) 140 55))
 
+(def-package! osx-clipboard
+  :diminish osx-clipboard-mode
+  :config
+  (osx-clipboard-mode t))
+
 (add-to-list 'auto-mode-alist '("\\.dig\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))
 (add-to-list 'auto-mode-alist '("\\.tf\\'" . terraform-mode))
