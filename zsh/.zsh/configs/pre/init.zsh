@@ -48,6 +48,9 @@ select-word-style bash
 setopt auto_pushd
 export dirstacksize=5
 
+# mass file move
+autoload zmv
+
 # awesome cd movements from zshkit
 setopt AUTOCD
 setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
@@ -66,7 +69,7 @@ setopt GLOB_COMPLETE
 
 setopt HIST_IGNORE_SPACE
 
-alias oras="curl http://wttr.in/Vilnius"
+alias oras="curl http://v2.wttr.in/Vilnius"
 
 function gitstats {
     git log --shortstat --author="$1" | grep -E "fil(e|es) changed" | awk '{files+=$1; inserted+=$4; deleted+=$6; delta+=$4-$6; ratio=deleted/inserted} END {printf "Commit stats:\n- Files changed (total)..  %s\n- Lines added (total)....  %s\n- Lines deleted (total)..  %s\n- Total lines (delta)....  %s\n- Add./Del. ratio (1:n)..  1 : %s\n", files, inserted, deleted, delta, ratio }' -
@@ -75,3 +78,4 @@ function gitstats {
 # COPYFILE_DISABLE to prevent several of the system-supplied programs (including tar) from giving special meaning to ._* archive members.
 # https://superuser.com/questions/259703/get-mac-tar-to-stop-putting-filenames-in-tar-archives
 export COPYFILE_DISABLE=1
+export BAT_PAGER=less
