@@ -1,0 +1,5 @@
+export PATH="$(brew --prefix goenv)/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+export GOPATH="$HOME/go"
