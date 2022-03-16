@@ -6,12 +6,16 @@
 
 (package! format-sql)
 
+(package! showkey)
+
 (package! osx-clipboard)
 
-(def-package! tern
+(package! feature-mode)
+
+(use-package! tern
   :hook (js2-mode . tern-mode))
 
-(def-package! company-tern
+(use-package! company-tern
   :after company-mode
   :hook ((js2-mode . tern-mode)
          (js2-mode . company-mode))
