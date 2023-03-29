@@ -54,11 +54,11 @@
            :desc "Browse files"            :n "f"   #'find-file)
 
     (:desc "project" :prefix "p"
-           :desc "Find file in project" :n "f" #'counsel-fzf
+           :desc "Find file in project" :n "f" #'projectile-find-file
            :desc "Invalidate cache" :n "i" #'projectile-invalidate-cache)
 
     ;(:desc "search" :prefix "/"
-    ;       :desc "Ripgrep"                :nv "/" #'counsel-rg)
+    ;       :desc "Ripgrep"                :nv "/" #'consult-ripgrep)
 
     (:desc "open" :prefix "o"
            :desc "Password manager" :n "p" #'+pass/ivy

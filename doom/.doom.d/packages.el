@@ -14,12 +14,12 @@
 
 (package! feature-mode)
 
-(use-package! tern
-  :hook (js2-mode . tern-mode))
+;(package! tern
+;  :hook (js2-mode . tern-mode))
 
-(use-package! company-tern
-  :after company-mode
-  :hook ((js2-mode . tern-mode)
-         (js2-mode . company-mode))
-  :init
-  (add-to-list 'company-backends 'company-tern))
+;(package! company-tern
+;  :after company-mode
+;  :hook ((js2-mode . tern-mode)
+;         (js2-mode . company-mode))
+;  :init
+;  (add-to-list 'company-backends 'company-tern))
