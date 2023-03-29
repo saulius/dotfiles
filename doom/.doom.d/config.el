@@ -16,7 +16,9 @@
       truncate-lines t
       evil-snipe-scope 'buffer
       evil-snipe-spillover-scope 'while-buffer
-      org-table-number-regexp "nil")
+      org-table-number-regexp "nil"
+      whitespace-style '(face trailing)
+)
 
 (add-to-list 'exec-path (concat home-directory "/.pyenv/shims"))
 (add-to-list 'exec-path (concat home-directory "/.cargo/bin"))
