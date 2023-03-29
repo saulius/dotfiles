@@ -1,5 +1,7 @@
 ;; -*- no-byte-compile: t; -*-
 
+(package! solarized-theme)
+
 (package! shell-pop)
 
 (package! terraform-mode)

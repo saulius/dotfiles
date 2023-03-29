@@ -6,7 +6,7 @@
 (setq menu-bar-mode nil
       confirm-kill-emacs nil
       home-directory (getenv "HOME")
-      doom-theme 'doom-one
+      doom-theme 'doom-solarized-dark-high-contrast
       doom-unicode-font nil
       doom-one-brighter-comments t
       doom-font (font-spec :family "DejaVu Sans Mono" :size 13)
